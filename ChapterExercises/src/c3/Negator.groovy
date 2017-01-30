@@ -10,6 +10,7 @@ class Negator implements CSProcess {
   void run () {
     while (true) {
       //output the negative of the input value
+		outChannel.write(-(inChannel.read()))
     }
   }
 }

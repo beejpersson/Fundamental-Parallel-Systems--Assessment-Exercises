@@ -26,7 +26,7 @@ class Differentiate implements CSProcess {
 			// insert a constructor for Minus
 			new Minus ( inChannel0: a.in(),
 						inChannel1: c.in(),
-						outChannel: outChannel)
+						outChannel: outChannel)	
 		]
 
 		new PAR ( differentiateList ).run()
