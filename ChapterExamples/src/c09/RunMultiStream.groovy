@@ -9,8 +9,9 @@ import phw.util.Ask
 
 def sources = Ask.Int ("Number of event sources between 1 and 9 ? ", 1, 9)
 
+//Default delay in event generation
 minTimes = [ 10, 20, 30, 40, 50, 10, 20, 30, 40 ]
-maxTimes = [ 100, 150, 200, 50, 60, 30, 60, 100, 80 ]  
+maxTimes = [ 100, 150, 200, 50, 60, 30, 60, 100, 80 ] 
       
 def es2ep = Channel.one2oneArray(sources)
 
@@ -24,6 +25,7 @@ def sourcesList = ( 0 ..< sources).collect { i ->
             }
 
 def eventProcess = new EventProcessing ( eventStreams: eventsList,
+										 //Default delay in processing
                                           minTime: 10,
                                           maxTime: 400 )
 

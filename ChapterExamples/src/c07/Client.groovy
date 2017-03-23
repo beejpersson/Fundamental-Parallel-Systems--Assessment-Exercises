@@ -27,12 +27,12 @@ class Client implements CSProcess{
       println "Client $clientNumber requested value stored at $key."
       def v = receiveChannel.read()
       if (v != desiredValue) {
-        println "Client $clientNumber has recieved the wrong value. $v was returned instead of $desiredValue."
+        println "Client $clientNumber has received the wrong value. $v was returned instead of $desiredValue."
         failedClient = clientNumber
         timesFailed = timesFailed + 1
-        passed = false
+        passed = false	
       } else {
-        println "Client $clientNumber recieved the desired value, $desiredValue."
+        println "Client $clientNumber received the desired value, $desiredValue."
       }
     }
 	

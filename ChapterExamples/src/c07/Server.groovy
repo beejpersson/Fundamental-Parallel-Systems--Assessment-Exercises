@@ -57,7 +57,7 @@ class Server implements CSProcess{
         case THIS_RECEIVE :
 		  def value = thisServerReceive.read()
           clientSend.write(value)
-		  println "server$serverID sent $value recieved from other server to client$serverID"
+		  println "server$serverID sent $value received from other server to client$serverID"
           break
       } // end switch              
     } //end while   
